@@ -44,6 +44,7 @@
                 <arg line="-m32 -mfpmath=sse -msse -msse2" if:set="build.arch.x86"/>
                 <arg line="-mcpu=powerpc64le" if:set="build.arch.ppc64le"/>
                 <arg line="-march=rv64g" if:set="build.arch.riscv64"/>
+                <arg line="-march=la464" if:set="build.arch.loongarch64"/>
                 <arg line="-O3 -flto -fPIC @{flags} -pthread -DNDEBUG -DLWJGL_LINUX -DLWJGL_${build.arch}"/>
                 <arg line="-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=0 -D_GNU_SOURCE"/>
                 <arg line="-D_FILE_OFFSET_BITS=64"/>
