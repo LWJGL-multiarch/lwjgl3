@@ -54,11 +54,11 @@ typedef enum ffi_abi
 
 #if defined(__loongarch64)
 #if defined(__loongarch_soft_float)
-  FFI_DEFAULT_ABI = FFI_LP64S
+  FFI_DEFAULT_ABI = FFI_LP64S,
 #elif defined(__loongarch_single_float)
-  FFI_DEFAULT_ABI = FFI_LP64F
+  FFI_DEFAULT_ABI = FFI_LP64F,
 #elif defined(__loongarch_double_float)
-  FFI_DEFAULT_ABI = FFI_LP64D
+  FFI_DEFAULT_ABI = FFI_LP64D,
 #else
 #error unsupported LoongArch floating-point ABI
 #endif
