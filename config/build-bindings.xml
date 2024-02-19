@@ -70,8 +70,18 @@ This script is included in /config/build-definitions.xml.
             <isset property="build.arch.mips64el"/>
         </or>
     </condition>
-    <property name="binding.shaderc" value="true"/>
-    <property name="binding.spvc" value="true"/>
+    <condition property="binding.shaderc" value="false" else="true">
+        <or>
+            <isset property="build.arch.loongarch64"/>
+            <isset property="build.arch.mips64el"/>
+        </or>
+    </condition>
+    <condition property="binding.spvc" value="false" else="true">
+        <or>
+            <isset property="build.arch.loongarch64"/>
+            <isset property="build.arch.mips64el"/>
+        </or>
+    </condition>
     <condition property="binding.sse" value="true" else="false"><isset property="build.arch.x64|x86"/></condition>
     <property name="binding.stb" value="true"/>
     <property name="binding.tinyexr" value="true"/>
