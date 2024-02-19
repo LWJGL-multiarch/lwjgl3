@@ -16,10 +16,14 @@ This script is included in /config/build-definitions.xml.
 
     <property name="binding.assimp" value="true"/>
     <condition property="binding.bgfx" value="false" else="true">
-        <and>
-            <isset property="platform.windows"/>
-            <isset property="build.arch.arm"/>
-        </and>
+        <or>
+            <and>
+                <isset property="platform.windows"/>
+                <isset property="build.arch.arm"/>
+            </and>
+            <isset property="build.arch.loongarch64"/>
+            <isset property="build.arch.mips64el"/>
+        </or>
     </condition>
     <property name="binding.cuda" value="true"/>
     <property name="binding.egl" value="true"/>
