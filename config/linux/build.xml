@@ -13,9 +13,10 @@
     <condition property="linux.triplet" value="mips64el-linux-gnuabi64"><isset property="build.arch.mips64el"/></condition>
     <condition property="linux.triplet" value="x86_64-linux-gnu"><isset property="build.arch.x64|x86"/></condition>
 
-    <condition property="gcc.prefix" value="" else="${linux.triplet}-">
+    <property name="gcc.prefix" value=""/>
+    <!-- <condition property="gcc.prefix" value="" else="${linux.triplet}-">
         <isset property="build.arch.x64|x86"/>
-    </condition>
+    </condition> -->
     <condition property="gcc.suffix" value="-${gcc.version}" else="">
         <isset property="gcc.version"/>
     </condition>
