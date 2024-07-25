@@ -68,7 +68,9 @@ public enum Platform {
         ARM64(true),
         ARM32(false),
         PPC64LE(true),
-        RISCV64(true);
+        RISCV64(true),
+        LOONGARCH64(true),
+        MIPS64EL(true);
 
         static final Architecture current;
 
@@ -90,6 +92,16 @@ public enum Platform {
                     throw new UnsupportedOperationException("Only RISC-V 64 is supported.");
                 }
                 current = Architecture.RISCV64;
+            } else if (osArch.startsWith("loongarch")) {
+                if (!"loongarch".equals(osArch)) {
+                    throw new UnsupportedOperationException("Only LoongArch 64 is supported.");
+                }
+                current = Architecture.LOONGARCH64;
+            } else if (osArch.startsWith("mips")) {
+                if (!"mips64el".equals(osArch)) {
+                    throw new UnsupportedOperationException("Only MIPS64el is supported.");
+                }
+                current = Architecture.MIPS64EL;
             } else {
                 current = is64Bit ? Architecture.X64 : Architecture.X86;
             }
