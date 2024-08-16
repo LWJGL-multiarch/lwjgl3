@@ -1753,6 +1753,8 @@
                 <get-release platform="linux" arch="arm32" file="libktx.so"/>
                 <get-release platform="linux" arch="ppc64le" file="libktx.so"/>
                 <get-release platform="linux" arch="riscv64" file="libktx.so"/>
+                <get-release platform="linux" arch="loongarch64" file="libktx.so"/>
+                <get-release platform="linux" arch="mips64el" file="libktx.so"/>
 
                 <get-release platform="macos" arch="x64" file="libktx.dylib"/>
                 <get-release platform="macos" arch="arm64" file="libktx.dylib"/>
