@@ -67,7 +67,7 @@ typedef enum ffi_abi
 #endif
 
   // LWJGL
-  #define HAS_FFI_SYSV 1
+  // #define HAS_FFI_SYSV 0
 } ffi_abi;
 
 #endif /* LIBFFI_ASM */
