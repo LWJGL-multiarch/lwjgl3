@@ -21,6 +21,9 @@ cp "$LWJGL_OUTPUT_DIR/libbgfx.so" "$NATIVE_LIBS_BASE/bgfx/libbgfx.so"
 mkdir -p "$NATIVE_LIBS_BASE/freetype"
 cp "$LWJGL_OUTPUT_DIR/libfreetype.so" "$NATIVE_LIBS_BASE/freetype/libfreetype.so"
 
+mkdir -p "$NATIVE_LIBS_BASE/glfw"
+cp "$LWJGL_OUTPUT_DIR/libglfw.so" "$NATIVE_LIBS_BASE/glfw/libglfw.so"
+
 mkdir -p "$NATIVE_LIBS_BASE/harfbuzz"
 cp "$LWJGL_OUTPUT_DIR/libharfbuzz.so" "$NATIVE_LIBS_BASE/harfbuzz/libharfbuzz.so"
 
@@ -41,4 +44,13 @@ cp "$LWJGL_OUTPUT_DIR/libopenxr_loader.so" "$NATIVE_LIBS_BASE/openxr/libopenxr_l
 
 mkdir -p "$NATIVE_LIBS_BASE/opus"
 cp "$LWJGL_OUTPUT_DIR/libopus.so" "$NATIVE_LIBS_BASE/opus/libopus.so"
+
+mkdir -p "$NATIVE_LIBS_BASE/sdl"
+cp "$LWJGL_OUTPUT_DIR/libSDL3.so" "$NATIVE_LIBS_BASE/sdl/libSDL3.so"
+
+mkdir -p "$NATIVE_LIBS_BASE/shaderc"
+cp "$LWJGL_OUTPUT_DIR/libshaderc.so" "$NATIVE_LIBS_BASE/shaderc/libshaderc.so"
+
+mkdir -p "$NATIVE_LIBS_BASE/spvc"
+cp "$LWJGL_OUTPUT_DIR/libspirv-cross.so" "$NATIVE_LIBS_BASE/spvc/libspirv-cross.so"
 
